@@ -168,6 +168,14 @@ func (n *Netbird) configure(ctx context.Context) error {
 		args = append(args, "--disable-firewall")
 	}
 
+	if n.state.Services.Netbird.Config.EnableRosenpass {
+		args = append(args, "--enable-rosenpass")
+	}
+
+	if n.state.Services.Netbird.Config.RosenpassPermissive {
+		args = append(args, "--rosenpass-permissive")
+	}
+
 	_, err = subprocess.RunCommandContext(ctx, "netbird", args...)
 	if err != nil {
 		return err
