@@ -22,4 +22,6 @@ type ServiceNetbirdConfig struct {
 	DNSResolverAddress  string   `json:"dns_resolver_address"  yaml:"dns_resolver_address"`
 	ExternalIPMap       []string `json:"external_ip_map"       yaml:"external_ip_map"`
 	ExtraDNSLabels      []string `json:"extra_dns_labels"      yaml:"extra_dns_labels"`
+	EnableRosenpass     bool     `json:"enable_rosenpass"      yaml:"enable_rosenpass"`
+	RosenpassPermissive bool     `json:"rosenpass_permissive"  yaml:"rosenpass_permissive"`
 }
